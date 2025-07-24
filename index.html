@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSFAS</title>
+    <link rel="stylesheet" href="./assests/css/style.css">
+
+    <!-- Add Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+<style>
+    .inter {
+        font-family: 'Inter', sans-serif;
+        /* Example weights you can use */
+        font-weight: 400;
+        /* Regular */
+        /* font-weight: 500; Medium */
+        /* font-weight: 600; Semi-bold */
+        /* font-weight: 700; Bold */
+    }
+
+    .poppins {
+        font-family: 'Poppins', sans-serif;
+        /* Available weights: 300, 400, 500, 600, 700 */
+        font-weight: 600;
+        /* Regular by default */
+    }
+
+    .scale-110 {
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+    }
+
+    .card {
+        transition: all 0.5s ease;
+    }
+</style>
+
+<body>
+    <header>
+
+        <nav class="flex justify-between xl:px-16 lg:px-10 px-2 items-center pt-4 2xl:pt-[50px] 2xl:px-[100px]">
+
+
+            <div class="flex lg:pt-3">
+                <a href="/build/index.html">
+                    <img class="w-10 2xl:w-[67px] 2xl:h-[82px]"
+                        src="/build/assests/img/WhatsApp_Image_2025-04-16_at_21.44.32_3656d040_1-removebg-preview (2) (1) 1.png"
+                        alt=""></a>
+                <div class="poppins">
+                    <h1 class="text-[13px] text-[#0F2B6B] font-semibold 2xl:text-[33px]">NSFAS</h1>
+                    <p class="text-[13px] 2xl:text-[16px] text-[#3D3D3D]">Student Support Group</p>
+                </div>
+            </div>
+
+
+            <ul class="lg:flex  hidden text-[15px] 2xl:text-[22px] text-[#3D3D3D] poppins font-light lg:gap-10 2xl:gap-[81px]">
+                <li class="hover:text-[#2B8CFF]"><a href="">Home</a></li>
+                <li class="hover:text-[#2B8CFF]"><a href="">About Us</a></li>
+                <li class="hover:text-[#2B8CFF]"><a href="">Forum</a></li>
+                <li class="hover:text-[#2B8CFF]"><a href="">Help</a></li>
+                <li class="hover:text-[#2B8CFF]"><a href="">Contact us</a></li>
+            </ul>
+
+            <div class="hidden md:mr-[88px] lg:mr-0 md:flex gap-4">
+                <button class="text-[#0F2B6B] font-semibold 2xl:text-[28px] 2xl:mr-[26px]">Login</button>
+
+                <div
+                    class="p-1 w-24 text-[14px] flex justify-center h-10 items-center text-white rounded-xl bg-gradient-to-r from-[#1A143A] to-[#2B8CFF] 2xl:text-[28px] 2xl:w-[198px] 2xl:h-[86px]">
+                    Sign up
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- Menu Toggle Button -->
+        <div id="menuToggle" class="absolute lg:hidden top-5 right-5 z-[1001] cursor-pointer p-2">
+            <div class="hamburger w-8 h-5 flex flex-col justify-between">
+                <span class="block h-[3px] w-full bg-gray-800 rounded transition-all duration-300"></span>
+                <span class="block h-[3px] w-full bg-gray-800 rounded transition-all duration-300"></span>
+                <span class="block h-[3px] w-full bg-gray-800 rounded transition-all duration-300"></span>
+            </div>
+        </div>
+        <!-- Menu -->
+        <nav id="menu"
+            class="absolute top-0 right-0 w-64 h-screen bg-white z-[1000] origin-right scale-x-0 shadow-[-5px_0_15px_rgba(0,0,0,0.1)] transition-transform duration-500 ease-[cubic-bezier(0.77,0.2,0.05,1.0)]">
+            <div class="menu-content opacity-0 transition-opacity duration-300 delay-200 pt-[70px] px-5 pb-5">
+                <ul class="list-none inter overflow-y-auto">
+                    <li class="mb-4 translate-x-5 opacity-0 transition-all duration-300 delay-[0.2s]">
+                        <a href="#"
+                            class="no-underline text-gray-800 text-lg flex items-center py-2 hover:text-red-400 transition-colors duration-300">
+                            <i class="fas fa-home mr-2 text-xl"></i> Home
+                        </a>
+                    </li>
+                    <li class="mb-4 translate-x-5 opacity-0 transition-all duration-300 delay-[0.25s]">
+                        <a href="#"
+                            class="no-underline text-gray-800 text-lg flex items-center py-2 hover:text-red-400 transition-colors duration-300">
+                            <i class="fas fa-info-circle mr-2 text-xl"></i> About
+                        </a>
+                    </li>
+                    <li class="mb-4 translate-x-5 opacity-0 transition-all duration-300 delay-[0.3s]">
+                        <a href="#"
+                            class="no-underline text-gray-800 text-lg flex items-center py-2 hover:text-red-400 transition-colors duration-300">
+                            <i class="fas fa-briefcase mr-2 text-xl"></i> Services
+                        </a>
+                    </li>
+                    <li class="mb-4 translate-x-5 opacity-0 transition-all duration-300 delay-[0.35s]">
+                        <a href="#"
+                            class="no-underline text-gray-800 text-lg flex items-center py-2 hover:text-red-400 transition-colors duration-300">
+                            <i class="fas fa-image mr-2 text-xl"></i> Portfolio
+                        </a>
+                    </li>
+                    <li class="mb-4 translate-x-5 opacity-0 transition-all duration-300 delay-[0.4s]">
+                        <a href="#"
+                            class="no-underline text-gray-800 text-lg flex items-center py-2 hover:text-red-400 transition-colors duration-300">
+                            <i class="fas fa-envelope mr-2 text-xl"></i> Contact
+                        </a>
+                    </li>
+
+                    <div class="pl-2 md:hidden flex gap-4">
+                        <button class="text-[#0F2B6B]">Login</button>
+
+                        <div
+                            class="p-1 w-24 text-[14px] flex justify-center h-10 items-center text-white rounded-xl bg-gradient-to-r from-[#1A143A] to-[#2B8CFF]">
+                            Sign up</div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero section  -->
+
+    <section class="relative">
+        <div class="md:flex">
+            <!-- left side  -->
+            <div
+                class="px-2 md:pt-[33px] lg:pt-[77px] md:px-[22px] md:w-[50%] xl:px-[55px] xl:pt-[88px] 2xl:pl-[100px]">
+                <div class="text-center md:text-start poppins text-[17px] md:text-[22px] lg:text-[29px] xl:text-[35px] md:pr-[18px] pt-10 font-semibold text-[#1A143A] 2xl:text-[65px]"
+                    data-aos="zoom-in" data-aos-duration="1000">
+                    <h1>Make Your Education Possible with NSFAS Support!</h1>
+                </div>
+
+                <div class="text-center md:text-start pt-2 lg:pt-3 text-[#858587] xl:pt-[33px] 2xl:text-[30px] ">
+                    <p class="2xl:leading-[50px] text-[15px] 2xl:text-[30px]" data-aos="zoom-in"
+                        data-aos-duration="1300">At NSFAS, we believe that no student
+                        should miss out on
+                        education because of financial struggles.
+                        That’s why we provide full funding for tuition, accommodation, and more — so you can focus on
+                        building your future without worry.</p>
+                </div>
+
+                <div class="flex lg:mt-[77px] md:mt-[33px] lg:mt-5-[44px] md:justify-start justify-center mt-4"
+                    data-aos="zoom-in" data-aos-duration="1500">
+                    <button
+                        class="text-[14px] bg-gradient-to-r from-[#1A143A] to-[#2B8CFF] text-white w-[190px] h-[39px] xl:h-[46px] rounded-xl font-[500] 2xl:w-[374px] 2xl:h-[86px] 2xl:text-[28px]">Connect
+                        with NSFAS</button>
+                </div>
+            </div>
+
+            <!-- right side  -->
+            <div class="pb-9 md:pl-[55px] lg:mt-[33px] lg:pl-[99px] 2xl:pl-[190px] 2xl:pt-[55px] 2xl:pr-[223px] "
+                data-aos="zoom-in" data-aos-duration="1000">
+
+                <!-- rectangle  -->
+                <div class="flex justify-center mt-[110px] ">
+                    <div
+                        class="h-[192px]  md:h-[252px] lg:h-[300px] xl:h-[373px] lg:w-[320px] xl:w-[399px] relative w-[230px] md:w-[280px] rounded-b-[12px] rounded-t-[300px] bg-gradient-to-r from-[#2B8CFF] to-[#231B4E] 2xl:w-[585px] 2xl:h-[635px]">
+
+                        <div
+                            class="absolute w-[230px] md:w-[280px] lg:w-[320px] xl:w-[399px] top-[-88px] right-[22px] xl:right-[40px] 2xl:right-[22px] xl:top-[-111px] 2xl:w-[666px] 2xl:top-[-170px]">
+                            <img class="" src="/build/assests/img/girl-bg.png" alt="">
+
+                        </div>
+                        <!-- hand card  -->
+                        <div
+                            class="w-[110px] 2xl:pl-[22px] 2xl:pt-[26px] 2xl:pb-[66px] lg:pt-3 lg:w-[160px] md:w-[130px] md:top-[-20px] md:right-[250px] pl-1 absolute top-[-37px] right-[160px] rounded-xl pb-3 border-[1px] shadow-xl border-[#00000040] xl:right-[369px] xl:w-[180px] xl:py-4 2xl:w-[243px] 2xl:h-[131px] 2xl:top-[44px] 2xl:right-[582px]">
+
+                            <div class="flex pt-1 ">
+                                <img class="w-[20px] lg:w-[25px] xl:w-[32px] 2xl:w-[40px] 2xl:h-[40px]"
+                                    src="/build/assests/img/round-1.png" alt="">
+                                <img class="w-[20px] lg:w-[25px] xl:w-[32px] 2xl:w-[40px] 2xl:h-[40px]  translate-x-[-7px] "
+                                    src="/build/assests/img/round-2.png" alt="">
+                                <img class="w-[20px] lg:w-[25px] xl:w-[32px] translate-x-[-12px] 2xl:w-[40px] 2xl:h-[40px]"
+                                    src="/build/assests/img/round-1.png" alt="">
+                                <img class="w-[20px] lg:w-[25px] xl:w-[32px] translate-x-[-18px] 2xl:w-[40px] 2xl:h-[40px]"
+                                    src="/build/assests/img/round-1.png" alt="">
+
+                                <div
+                                    class="absolute lg:left-[110px] xl:text-[16px] xl:top-[23px] xl:left-[129px] lg:text-[14px] text-[13px] left-[71px] 2xl:text-[18px] 2xl:left-[177px] 2xl:top-[37px]">
+                                    2400+</div>
+
+                            </div>
+                            <div class="text-[11px] lg:text-[12px] pt-1 xl:text-[14px]">Happy students</div>
+                            <div class="flex items-center  mt-1 lg:mt-2">
+                                <img class="w-[9px] h-[9px] xl:w-[12px] xl:h-[12px]" src="/build/assests/img/Star 4.png"
+                                    alt="">
+                                <img class="w-[9px] h-[9px] xl:w-[12px] xl:h-[12px]" src="/build/assests/img/Star 4.png"
+                                    alt="">
+                                <img class="w-[9px] h-[9px] xl:w-[12px] xl:h-[12px]" src="/build/assests/img/Star 4.png"
+                                    alt="">
+                                <img class="w-[9px] h-[9px] xl:w-[12px] xl:h-[12px]" src="/build/assests/img/Star 4.png"
+                                    alt="">
+                                <img class="w-[9px] h-[9px] xl:w-[12px] xl:h-[12px]" src="/build/assests/img/Star 4.png"
+                                    alt="">
+
+                                <h2 class="text-[#3E4452] text-[9px] ml-1 lg:ml-[33px] xl:text-[11px]">(4.7 Stars)</h2>
+                            </div>
+                        </div>
+                        <!-- easy funding application  -->
+
+                        <div
+                            class="flex gap-1 lg:translate-x-[180px] lg:px-[22px] lg:py-2 lg:top-[110px] md:top-[116px] md:translate-x-[150px] items-center absolute top-[66px] translate-x-[90px] shadow-xl rounded-lg px-3 py-[4px] xl:py-[10px] bg-[#FFFFFF] 2xl:w-[322px] 2xl:h-[50px] 2xl:pl-[33px] 2xl:top-[277px] 2xl:left-[133px]">
+
+                            <div><img class="w-[13px] 2xl:w-[22px]" src="/build/assests/img/Star 4.png" alt=""></div>
+                            <div class="text-[12px] 2xl:text-[18px] 2xl:pl-[11px]">Easy Funding Application</div>
+                        </div>
+
+                        <!-- empowering future  -->
+                        <div
+                            class="bg-white md:top-[218px] xl:w-[210px] xl:py-2 xl:top-[320px] xl:translate-x-[290px]  lg:top-[260px] lg:translate-x-[190px] md:translate-x-[150px] translate-x-[92px] rounded-xl absolute w-[170px] pl-[13px] pt-[3px] top-[150px] border border-[#0F2B6B] 2xl:w-[408px] 2xl:h-[147px] 2xl:top-[553px] pr-4 ">
+                            <p class="text-[11px] md:text-[12px] 2xl:text-[22px]">Empowering Futures, One Student at a
+                                Time — With
+                                Financial Support That Changes Lives.
+                            </p>
+                            <div
+                                class="flex  absolute left-[130px] bottom-[2px]  translate-y-4 justify-end 2xl:pr-4 mb-2 2xl:left-[299px] 2xl:translate-y-9 xl:translate-x-[33px] xl:translate-y-[30px]">
+                                <img class="w-[22px] 2xl:w-[78px] xl:w-[44px]" src="/build/assests/img/Vector-coma.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hidden  left-[210px] absolute top-[240px] xl:left-[220px] 2xl:top-[490px] 2xl:left-[464px] md:flex"
+            data-aos="zoom-in" data-aos-duration="1300">
+            <img class="w-[430px] lg:w-[570px] xl:w-[750px] 2xl:w-[999px]" src="/build/assests/img/doted-line.png"
+                alt="">
+
+        </div>
+    </section>
+
+    <!-- why join section  -->
+    <section class="pt-[77px]">
+        <div class="pt-[33px]">
+            <div class="flex items-center justify-center mt-8" data-aos="fade-up" data-aos-duration="1200">
+                <div class=""><img class="w-[33px] md:w-[39px] 2xl:w-[119px] xl:w-[55px]"
+                        src="/build/assests/img/dot-curcle.png" alt="">
+                </div>
+                <div
+                    class="poppins translate-x-[-12px] text-[#242424] md:text-[20px] lg:text-[19px] 2xl:text-[70px] 2xl:translate-x-[-44px] xl:text-[33px] xl:translate-x-[-22px] ">
+                    Why Join NSFAS Forum?</div>
+            </div>
+            <div class="text-center text-[#858587] text-[12px] px-2 md:px-[120px] 2xl:text-[22px] 2xl:px-[500px] xl:text-[14px] xl:mt-2"
+                data-aos="fade-up" data-aos-duration="1400">
+                Get real advice, helpful resources, and emotional support from students just like you — no more guessing
+                through your NSFAS process.
+            </div>
+
+            <!-- boxes  -->
+            <div class="pb-4 lg:flex justify-center lg:px-10 pt-5 2xl:px-[100px] xl:px-[90px]">
+                <!-- box 1  -->
+                <div class="flex justify-center py-6 lg:px-2 xl:pb-1" data-aos="fade-up" data-aos-duration="1200">
+                    <div
+                        class="shadow-2xl bg-gradient-to-r from-[#1A143A] to-[#2B8CFF] pb-3 px-[30px] w-[97%] rounded-xl 2xl:w-[547px] 2xl:h-[376px] 2xl:pt-[10px]">
+                        <div class="pt-4"><img class="w-[55px] 2xl:w-[90px] 2xl:h-[72px]"
+                                src="/build/assests/img/icon-frame.png" alt=""></div>
+                        <div class="text-[#FFFFFF] pt-4 poppins 2xl:text-[24px]">Engage with Student</div>
+                        <div class="text-[#E8E7EB] pt-4 text-[12px] poppins 2xl:text-[18px] 2xl:leading-10">Join a
+                            growing student network from across
+                            South Africa, where voices are heard and experiences are shared. Whether you need academic
+                            advice or inspiration from real success stories, support is always just a message away.
+                        </div>
+
+                    </div>
+                </div>
+                <!-- box 2  -->
+                <div class="flex justify-center py-6 lg:px-2 xl:pb-1" data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="shadow-2xl  pb-3 px-[30px] w-[97%] rounded-xl 2xl:w-[547px] 2xl:h-[376px] 2xl:pt-[10px]">
+                        <div class="pt-4"><img class="w-[55px] 2xl:w-[90px] 2xl:h-[72px]"
+                                src="/build/assests/img/book-frame.png" alt=""></div>
+                        <div class="text-[#0F2C6D] pt-4 poppins 2xl:text-[24px]">Get Advice and Support</div>
+                        <div class="text-[#858587] pt-4 text-[12px] poppins 2xl:text-[18px] 2xl:leading-10">Join a
+                            growing student network from across
+                            South Africa, where voices are heard and experiences are shared. Whether you need academic
+                            advice or inspiration from real success stories, support is always just a message away.
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- box 3  -->
+                <div class="flex justify-center py-6 lg:px-2 xl:pb-1 2xl:px-[30px] 2xl:py-[30px]" data-aos="fade-up"
+                    data-aos-duration="1600">
+                    <div
+                        class="shadow-2xl  pb-3 px-[30px] w-[97%] rounded-xl 2xl:w-[547px] 2xl:h-[376px] 2xl:pt-[10px]">
+                        <div class="pt-4"><img class="w-[55px] 2xl:w-[90px] 2xl:h-[72px]"
+                                src="/build/assests/img/queston frame.png" alt=""></div>
+                        <div class="text-[#0F2C6D] pt-4 poppins 2xl:text-[24px]">Stay Informed and Empowered</div>
+                        <div class="text-[#858587] pt-4 text-[12px] poppins 2xl:text-[18px] 2xl:leading-10">Join a
+                            growing student network from across
+                            South Africa, where voices are heard and experiences are shared. Whether you need academic
+                            advice or inspiration from real success stories, support is always just a message away.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <!-- forum  -->
+    <section class="pt-[120px]">
+        <div class="">
+            <div>
+                <div class="flex items-center justify-center mt-8" data-aos="fade-up" data-aos-duration="1000">
+                    <div class=""><img class="w-[33px] md:w-[39px] 2xl:w-[119px] xl:w-[55px]"
+                            src="/build/assests/img/dot-curcle.png" alt="">
+                    </div>
+                    <div
+                        class="poppins translate-x-[-12px] text-[#242424] md:text-[20px] lg:text-[19px] 2xl:text-[70px] 2xl:translate-x-[-44px] xl:text-[33px] xl:translate-x-[-22px] ">
+                        NSFAS Forum</div>
+                </div>
+                <div class="text-center text-[#858587] text-[12px] px-2 md:px-[120px] 2xl:text-[22px] 2xl:px-[500px] xl:text-[14px] xl:mt-2 xl:px-[320px]"
+                    data-aos="fade-up" data-aos-duration="1400">
+                    Your education is important, and with NSFAS, it’s within reach. Join our forum to connect with
+                    others, ask questions, the most of your financial aid throughout your academic journey. .
+                </div>
+
+                <div class="flex justify-center pt-5 gap-3 2xl:pt-[50px]" data-aos="fade-up" data-aos-duration="1600">
+                    <a class="bg-gradient-to-r poppins from-[#1A143A] to-[#2B8CFF] flex items-center justify-center text-center text-white py-2 w-[77px] rounded-lg text-sm shadow-xl 2xl:w-[148px] 2xl:h-[64px] 2xl:text-[22px]"
+                        href="">Latest</a>
+
+                    <a class="poppins  flex items-center py-2 justify-center text-center text-[#0F2B6B] w-[77px] rounded-lg text-sm shadow-xl 2xl:w-[148px] 2xl:h-[64px] 2xl:text-[22px]"
+                        href="">Trending</a>
+
+                    <a class=" poppins flex items-center py-2 justify-center text-center text-[#0F2B6B] w-[77px] rounded-lg text-sm shadow-xl 2xl:w-[148px] 2xl:h-[64px] 2xl:text-[22px]"
+                        href="">For you</a>
+                </div>
+
+
+            </div>
+            <!-- cards  -->
+            <div class="mt-[55px] relative z-10 2xl:mt-[80px] 2xl:px-[99px]">
+                <!-- card 1  -->
+                <div class="flex justify-center" data-aos="fade-up" data-aos-duration="1200">
+                    <div
+                        class="flex justify-between  sm:w-[91%] items-center gap-2 rounded-xl  w-[97%] px-[3px] sm:px-[33px] py-[15px] shadow-2xl lg:py-5 2xl:w-[1740px] 2xl:h-[169px] 2xl:px-[47px]">
+
+                        <div class=" flex items-center gap-3 ">
+                            <div>
+                                <img class="sm:w-[44px] w-[55px] 2xl:w-[88px]" src="/build/assests/img/card-man.png"
+                                    alt="">
+                            </div>
+                            <div class="text-sm">
+                                <p class="2xl:text-[30px]">Jack</p>
+                                <p class="flex items-center gap-1  2xl:pt-2 2xl:text-[18px]">10<span><img
+                                            class="w-[20px] sm:w-[11px] 2xl:w-[13px]"
+                                            src="/build/assests/img/card-logo.png" alt=""></span></p>
+                            </div>
+                            <div class="sm:pl-[44px]">
+                                <h1 class="poppins text-[12px] lg:text-[14px] 2xl:text-[30px]">Struggling with Final
+                                    Exam Prep – Any Tips?</h1>
+                                <h1 class="poppins text-[#00000099] text-[10px]">Education</h1>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <h1 class="poppins text-[11px] 2xl:text-[30px] text-[#242424]">2mint ago</h1>
+                            <div class="sm:flex sm:gap-3 pr-4  gap-1 items-center">
+                                <div class="flex mt-1 items-center gap-1">
+                                    <img class="w-[14px] 2xl:w-[18px]" src="/build/assests/img/icon-thumb.png" alt="">
+                                    <h1 class="poppins text-[10px] text-[#00000099] 2xl:text-[18px]">9,938</h1>
+                                </div>
+                                <div class="flex items-center mt-1 gap-1">
+                                    <img class="w-[14px] 2xl:w-[18px]" src="/build/assests/img/icon-mess.png" alt="">
+                                    <h1 class="poppins text-[10px] text-[#00000099] 2xl:text-[18px]">9,938</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 2  -->
+                <div class="flex justify-center my-[22px] 2xl:my-[33px]" data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="flex justify-between  sm:w-[91%] items-center gap-2 rounded-xl  w-[97%] px-[3px] sm:px-[33px] py-[15px] shadow-2xl lg:py-5 2xl:w-[1740px] 2xl:h-[169px] 2xl:px-[47px]">
+
+                        <div class=" flex items-center gap-3 ">
+                            <div>
+                                <img class="sm:w-[44px] w-[55px] 2xl:w-[88px]" src="/build/assests/img/card-man2.png"
+                                    alt="">
+                            </div>
+                            <div class="text-sm">
+                                <p class="2xl:text-[30px]">Jack</p>
+                                <p class="flex items-center gap-1  2xl:pt-2 2xl:text-[18px]">10<span><img
+                                            class="w-[20px] sm:w-[11px] 2xl:w-[13px]"
+                                            src="/build/assests/img/card-logo.png" alt=""></span></p>
+                            </div>
+                            <div class="sm:pl-[44px]">
+                                <h1 class="poppins text-[12px] lg:text-[14px] 2xl:text-[30px]">Struggling with Final
+                                    Exam Prep – Any Tips?</h1>
+                                <h1 class="poppins text-[#00000099] text-[10px]">Education</h1>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <h1 class="poppins text-[11px] 2xl:text-[30px] text-[#242424]">2mint ago</h1>
+                            <div class="sm:flex sm:gap-3 pr-4  gap-1 items-center">
+                                <div class="flex mt-1 items-center gap-1">
+                                    <img class="w-[14px] 2xl:w-[18px]" src="/build/assests/img/icon-thumb.png" alt="">
+                                    <h1 class="poppins text-[10px] text-[#00000099] 2xl:text-[18px]">9,938</h1>
+                                </div>
+                                <div class="flex items-center mt-1 gap-1">
+                                    <img class="w-[14px] 2xl:w-[18px]" src="/build/assests/img/icon-mess.png" alt="">
+                                    <h1 class="poppins text-[10px] text-[#00000099] 2xl:text-[18px]">9,938</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 3  -->
+
+                <div class="flex justify-center  my-[22px] 2xl:my-[33px] bg-[#FFFFFFE8]" data-aos="fade-up"
+                    data-aos-duration="1500">
+                    <div
+                        class="flex justify-between  sm:w-[91%] items-center gap-2 rounded-xl  w-[97%] px-[3px] sm:px-[33px] py-[15px] shadow-2xl lg:py-5 2xl:w-[1740px] 2xl:h-[169px] 2xl:px-[47px]">
+
+                        <div class=" flex items-center gap-3 ">
+                            <div>
+                                <img class="sm:w-[44px] w-[55px] 2xl:w-[88px]" src="/build/assests/img/card-man3.png"
+                                    alt="">
+                            </div>
+                            <div class="text-sm">
+                                <p class="2xl:text-[30px]">Jack</p>
+                                <p class="flex items-center gap-1  2xl:pt-2 2xl:text-[18px]">10<span><img
+                                            class="w-[20px] sm:w-[11px] 2xl:w-[13px]"
+                                            src="/build/assests/img/card-logo.png" alt=""></span></p>
+                            </div>
+                            <div class="sm:pl-[44px]">
+                                <h1 class="poppins text-[12px] lg:text-[14px] 2xl:text-[30px]">Struggling with Final
+                                    Exam Prep – Any Tips?</h1>
+                                <h1 class="poppins text-[#00000099] text-[10px]">Education</h1>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <h1 class="poppins text-[11px] 2xl:text-[30px] text-[#242424]">2mint ago</h1>
+                            <div class="sm:flex sm:gap-3 pr-4  gap-1 items-center">
+                                <div class="flex mt-1 items-center gap-1">
+                                    <img class="w-[14px] 2xl:w-[18px]" src="/build/assests/img/icon-thumb.png" alt="">
+                                    <h1 class="poppins text-[10px] text-[#00000099] 2xl:text-[18px]">9,938</h1>
+                                </div>
+                                <div class="flex items-center mt-1 gap-1">
+                                    <img class="w-[14px] 2xl:w-[18px]" src="/build/assests/img/icon-mess.png" alt="">
+                                    <h1 class="poppins text-[10px] text-[#00000099] 2xl:text-[18px]">9,938</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 4  -->
+
+                <div class="flex justify-center mt-[22px] 2xl:my-[33px]" data-aos="fade-up" data-aos-duration="1100">
+                    <div
+                        class="flex justify-between  sm:w-[91%] items-center gap-2 rounded-xl  w-[97%] px-[3px] sm:px-[33px] py-[15px] shadow-2xl lg:py-5 2xl:w-[1740px] 2xl:h-[169px] 2xl:px-[47px]">
+
+                        <div class=" flex items-center gap-3 ">
+                            <div>
+                                <img class="sm:w-[44px] w-[55px] 2xl:w-[88px]" src="/build/assests/img/card-man2.png"
+                                    alt="">
+                            </div>
+                            <div class="text-sm">
+                                <p class="2xl:text-[30px]">Jack</p>
+                                <p class="flex items-center gap-1  2xl:pt-2 2xl:text-[18px]">10<span><img
+                                            class="w-[20px] sm:w-[11px] 2xl:w-[13px]"
+                                            src="/build/assests/img/card-logo.png" alt=""></span></p>
+                            </div>
+                            <div class="sm:pl-[44px]">
+                                <h1 class="poppins text-[12px] lg:text-[14px] 2xl:text-[30px]">Struggling with Final
+                                    Exam Prep – Any Tips?</h1>
+                                <h1 class="poppins text-[#00000099] text-[10px]">Education</h1>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <h1 class="poppins text-[11px] 2xl:text-[30px] text-[#242424]">2mint ago</h1>
+                            <div class="sm:flex sm:gap-3 pr-4  gap-1 items-center">
+                                <div class="flex mt-1 items-center gap-1">
+                                    <img class="w-[14px] 2xl:w-[18px]" src="/build/assests/img/icon-thumb.png" alt="">
+                                    <h1 class="poppins text-[10px] text-[#00000099] 2xl:text-[18px]">9,938</h1>
+                                </div>
+                                <div class="flex items-center mt-1 gap-1">
+                                    <img class="w-[14px] 2xl:w-[18px]" src="/build/assests/img/icon-mess.png" alt="">
+                                    <h1 class="poppins text-[10px] text-[#00000099] 2xl:text-[18px]">9,938</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bg  -->
+                <div class=" hidden sm:flex translate-y-[-180px] 2xl:translate-y-[-360px] absolute z-[-1]">
+                    <img class="w-[130px] 2xl:w-[210px]" src="/build/assests/img/card-bg.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- one click  -->
+    <section class="pt-[120px]">
+        <div class="relative">
+            <div class="absolute top-[-14px] z-[-1]">
+                <img class="w-[30%] lg:w-[35%] xl:w-[46%] 2xl:w-[69%]" src="/build/assests/img/one-click-dot.png"
+                    alt="">
+            </div>
+            <!-- card  -->
+            <div class="flex justify-center">
+                <div class="bg-cover relative bg-fixed bg-no-repeat w-[96%] sm:w-[89%] md:w-[] px-[9px] py-[9px] pt-6 rounded-xl sm:pt-[44px] 2xl:pt-[141px] 2xl:pb-[98px]"
+                    style="background-image: url('../build/assests/img/one-click-bg.png');" data-aos="fade-up"
+                    data-aos-duration="1000">
+    
+
+                    <div class="absolute"></div>
+
+                    
+
+                    <div class="flex justify-center ">
+                        <h1 class="text-[#FFFFFF] poppins sm:text-[20px] xl:text-[26px] 2xl:text-[70px]">One Click
+                            Closer to Your Future</h1>
+                    </div>
+                    <div class="px-[44px] sm:mt-3">
+                        <h1
+                            class="text-xs sm:text-sm poppins font-thin text-[#FFFFFF] text-center 2xl:text-[30px] 2xl:px-[99px] 2xl:leading-[55px]">
+                            Get access to fully funded education
+                            with just
+                            one simple step. Apply now and move
+                            confidently
+                            toward the future you deserve.</h1>
+                    </div>
+
+                    <div class="flex justify-center lg:mt-[77px] md:mt-[33px]  mt-4 2xl:mt-[50px]">
+                        <button
+                            class="text-[14px] bg-gradient-to-r lg:w-[190px] from-[#1A143A] to-[#2B8CFF] text-white w-[160px] h-[35px] xl:h-[46px] rounded-xl  2xl:w-[374px] 2xl:h-[86px] 2xl:text-[28px] poppins font-extralight">Connect
+                            with NSFAS</button>
+                    </div>
+
+
+                    <div
+                        class=" flex justify-end lg:translate-x-[59px] 2xl:translate-x-[99px] 2xl:translate-y-[180px] xl:translate-x-[79px] translate-x-3 translate-y-[33px] relative z-[-1]">
+                        <img class="w-[93px] lg:w-[100px] xl:w-[120px] 2xl:w-[200px]"
+                            src="/build/assests/img/one-click-dot.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- explore section  -->
+    <section class="pt-[70px]">
+        <div>
+            <div>
+                <div class="flex items-center justify-center mt-8" data-aos="fade-up" data-aos-duration="1000">
+                    <div class=""><img class="w-[33px] md:w-[39px] 2xl:w-[119px] xl:w-[55px]"
+                            src="/build/assests/img/dot-curcle.png" alt="">
+                    </div>
+                    <div
+                        class="poppins translate-x-[-12px] text-[#242424] md:text-[20px] lg:text-[19px] 2xl:text-[70px] 2xl:translate-x-[-44px] xl:text-[33px] xl:translate-x-[-22px] ">
+                        Explore Forum Categories</div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1600"
+                    class="text-center text-[#858587] text-[12px] px-2 md:px-[120px] 2xl:text-[22px] 2xl:px-[500px] xl:text-[14px] xl:mt-2 xl:px-[300px]">
+                    Discover the power of your voice and unlock a world where knowledge, passion, and creativity
+                    converge – together, we can build something greater than the sum of our individual ideas, creating a
+                    community of unstoppable energy.
+                </div>
+            </div>
+            <!-- cards  -->
+            <div class="lg:px-5 2xl:px-[99px]"> <!-- main div -->
+                <div class="lg:flex px-4 "> <!--First Cards Row-->
+
+                    <!-- card 1  -->
+                    <div class="flex justify-center pt-[66px] 2xl:pt-[120px]" data-aos="fade-up"
+                        data-aos-duration="1000">
+                        <div
+                            class="bg-gradient-to-r from-[#1A143A] to-[#2B8CFF] w-[95%] rounded-xl lg:h-[230px] pb-4 2xl:h-full">
+                            <div class="flex justify-center">
+                                <div class="flex translate-x-2 translate-y-[-28px] 2xl:translate-y-[-55px]">
+                                    <img class="w-[44px] h-[44px] translate-y-1 xl:w-[55px] xl:h-[55px] 2xl:w-[99px] 2xl:h-[93px]"
+                                        src="/build/assests/img/Vector-cards.png" alt="">
+                                    <img class="w-[55px] translate-x-[-30px] 2xl:translate-x-[-60px] xl:w-[66px] xl:h-[66px] 2xl:w-[120px] 2xl:h-[120px]"
+                                        src="/build/assests/img/card-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="px-[12px] sm:px-[19px]">
+                                <div class="text-center poppins text-[#FFFFFF] lg:text-[17px] 2xl:text-[25px]">Welcome
+                                    Lounge</div>
+                                <h1
+                                    class="text-center inter text-[#FFFFFF] text-xs   mt-2 2xl:text-[16px] 2xl:leading-[30px] 2xl:px-[30px] 2xl:pb-[30px]">
+                                    Welcome to your
+                                    student space where everything begins. From funding tips to real-time updates and
+                                    resources, the Welcome Lounge is your starting point. Whether you're just starting
+                                    out or need support along the way, we're here to make your journey smoother and more
+                                    confident.
+
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2  -->
+                    <div class="flex justify-center pt-[66px] 2xl:pt-[120px]" data-aos="fade-up"
+                        data-aos-duration="1300">
+                        <div class=" w-[95%] rounded-xl lg:h-[230px] pb-4 2xl:h-full border border-[#85858792]">
+                            <div class="flex justify-center">
+                                <div class="flex translate-x-2 translate-y-[-28px] 2xl:translate-y-[-55px]">
+                                    <img class="w-[44px] h-[44px] translate-y-1 xl:w-[55px] xl:h-[55px] 2xl:w-[99px] 2xl:h-[93px]"
+                                        src="/build/assests/img/Vector-cards.png" alt="">
+                                    <img class="w-[55px] translate-x-[-30px] 2xl:translate-x-[-60px] xl:w-[66px] xl:h-[66px] 2xl:w-[120px] 2xl:h-[120px]"
+                                        src="/build/assests/img/card-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="px-[12px] sm:px-[19px]">
+                                <div class="text-center poppins text-[#1A143A] lg:text-[17px] 2xl:text-[25px]">Welcome
+                                    Lounge</div>
+                                <h1
+                                    class="text-center inter text-[#858587] text-xs   mt-2 2xl:text-[16px] 2xl:leading-[30px] 2xl:px-[30px] 2xl:pb-[30px]">
+                                    Welcome to your
+                                    student space where everything begins. From funding tips to real-time updates and
+                                    resources, the Welcome Lounge is your starting point. Whether you're just starting
+                                    out or need support along the way, we're here to make your journey smoother and more
+                                    confident.
+
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 3  -->
+                    <div class="flex justify-center pt-[66px] 2xl:pt-[120px]" data-aos="fade-up"
+                        data-aos-duration="1100">
+                        <div class=" w-[95%] rounded-xl lg:h-[230px] pb-4 2xl:h-full border border-[#85858792]">
+                            <div class="flex justify-center">
+                                <div class="flex translate-x-2 translate-y-[-28px] 2xl:translate-y-[-55px]">
+                                    <img class="w-[44px] h-[44px] translate-y-1 xl:w-[55px] xl:h-[55px] 2xl:w-[99px] 2xl:h-[93px]"
+                                        src="/build/assests/img/Vector-cards.png" alt="">
+                                    <img class="w-[55px] translate-x-[-30px] 2xl:translate-x-[-60px] xl:w-[66px] xl:h-[66px] 2xl:w-[120px] 2xl:h-[120px]"
+                                        src="/build/assests/img/card-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="px-[12px] sm:px-[19px]">
+                                <div class="text-center poppins text-[#1A143A] lg:text-[17px] 2xl:text-[25px]">Welcome
+                                    Lounge</div>
+                                <h1
+                                    class="text-center inter text-[#858587] text-xs   mt-2 2xl:text-[16px] 2xl:leading-[30px] 2xl:px-[30px] 2xl:pb-[30px]">
+                                    Welcome to your
+                                    student space where everything begins. From funding tips to real-time updates and
+                                    resources, the Welcome Lounge is your starting point. Whether you're just starting
+                                    out or need support along the way, we're here to make your journey smoother and more
+                                    confident.
+
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg:flex px-4"> <!--second Cards Row-->
+
+                    <!-- card 4  -->
+                    <div class="flex justify-center pt-[66px] 2xl:pt-[120px]" data-aos="fade-up"
+                        data-aos-duration="1500">
+                        <div class=" w-[95%] rounded-xl lg:h-[230px] pb-4 2xl:h-full  border border-[#85858792]">
+                            <div class="flex justify-center">
+                                <div class="flex translate-x-2 translate-y-[-28px] 2xl:translate-y-[-55px]">
+                                    <img class="w-[44px] h-[44px] translate-y-1 xl:w-[55px] xl:h-[55px] 2xl:w-[99px] 2xl:h-[93px]"
+                                        src="/build/assests/img/Vector-cards.png" alt="">
+                                    <img class="w-[55px] translate-x-[-30px] 2xl:translate-x-[-60px] xl:w-[66px] xl:h-[66px] 2xl:w-[120px] 2xl:h-[120px]"
+                                        src="/build/assests/img/card-4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="px-[12px] sm:px-[19px]">
+                                <div class="text-center poppins text-[#1A143A] lg:text-[17px] 2xl:text-[25px]">Welcome
+                                    Lounge</div>
+                                <h1
+                                    class="text-center inter text-[#858587] text-xs   mt-2 2xl:text-[16px] 2xl:leading-[30px] 2xl:px-[30px] 2xl:pb-[30px]">
+                                    Welcome to your
+                                    student space where everything begins. From funding tips to real-time updates and
+                                    resources, the Welcome Lounge is your starting point. Whether you're just starting
+                                    out or need support along the way, we're here to make your journey smoother and more
+                                    confident.
+
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 5  -->
+                    <div class="flex justify-center pt-[66px] 2xl:pt-[120px]" data-aos="fade-up"
+                        data-aos-duration="1200">
+                        <div class=" w-[95%] rounded-xl lg:h-[230px] pb-4 2xl:h-full border border-[#85858792]">
+                            <div class="flex justify-center">
+                                <div class="flex translate-x-2 translate-y-[-28px] 2xl:translate-y-[-55px]">
+                                    <img class="w-[44px] h-[44px] translate-y-1 xl:w-[55px] xl:h-[55px] 2xl:w-[99px] 2xl:h-[93px]"
+                                        src="/build/assests/img/Vector-cards.png" alt="">
+                                    <img class="w-[55px] translate-x-[-30px] 2xl:translate-x-[-60px] xl:w-[66px] xl:h-[66px] 2xl:w-[120px] 2xl:h-[120px]"
+                                        src="/build/assests/img/card-5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="px-[12px] sm:px-[19px]">
+                                <div class="text-center poppins text-[#1A143A] lg:text-[17px] 2xl:text-[25px]">Welcome
+                                    Lounge</div>
+                                <h1
+                                    class="text-center inter text-[#858587] text-xs   mt-2 2xl:text-[16px] 2xl:leading-[30px] 2xl:px-[30px] 2xl:pb-[30px]">
+                                    Welcome to your
+                                    student space where everything begins. From funding tips to real-time updates and
+                                    resources, the Welcome Lounge is your starting point. Whether you're just starting
+                                    out or need support along the way, we're here to make your journey smoother and more
+                                    confident.
+
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 6  -->
+                    <div class="flex justify-center pt-[66px] 2xl:pt-[120px]" data-aos="fade-up"
+                        data-aos-duration="1800">
+                        <div class=" w-[95%] rounded-xl lg:h-[230px] pb-4 2xl:h-full border border-[#85858792]">
+                            <div class="flex justify-center">
+                                <div class="flex translate-x-2 translate-y-[-28px] 2xl:translate-y-[-55px]">
+                                    <img class="w-[44px] h-[44px] translate-y-1 xl:w-[55px] xl:h-[55px] 2xl:w-[99px] 2xl:h-[93px]"
+                                        src="/build/assests/img/Vector-cards.png" alt="">
+                                    <img class="w-[55px] translate-x-[-30px] 2xl:translate-x-[-60px] xl:w-[66px] xl:h-[66px] 2xl:w-[120px] 2xl:h-[120px]"
+                                        src="/build/assests/img/card-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="px-[12px] sm:px-[19px]">
+                                <div class="text-center poppins text-[#1A143A] lg:text-[17px] 2xl:text-[25px]">Welcome
+                                    Lounge</div>
+                                <h1
+                                    class="text-center inter text-[#858587] text-xs   mt-2 2xl:text-[16px] 2xl:leading-[30px] 2xl:px-[30px] 2xl:pb-[30px]">
+                                    Welcome to your
+                                    student space where everything begins. From funding tips to real-time updates and
+                                    resources, the Welcome Lounge is your starting point. Whether you're just starting
+                                    out or need support along the way, we're here to make your journey smoother and more
+                                    confident.
+
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- slider  -->
+
+    <section class="pb-6 md:pb-[0px] 2xl:px-[80px] lg:px-[20px] xl:px-[26px]">
+        <div>
+            <div data-aos="fade-up" data-aos-duration="1600"
+                class="text-center  poppins text-[17px] md:text-[22px] lg:text-[29px] xl:text-[35px] md:pr-[18px] pt-10 font-semibold text-[#1A143A] 2xl:text-[65px]">
+                <h1>What Our User Say!</h1>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000"
+                class="text-center  poppins text-[13px] 2xl:text-[22px] px-1 pt-2 font-semibold text-[#858587] 2xl:px-[400px] md:px-[80px]">
+                <h1>"We believe in building experiences, not just services. Here’s what our users have to say about the
+                    impact we've made in their journey."</h1>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="1300"
+                class="relative w-full 2xl:h-[78vh] overflow-hidden   pt-[55px] 2xl:mt-[44px] 2xl:pl-[px]  pb-[33px] lg:pb-0">
+                <div id="slider" class="flex transition-transform duration-500 ease-in-out xl:pl-[33px] lg:pl-[19px] 2xl:pl-0">
+                    <!-- Slide 1 -->
+                    <div
+                        class="slide w-full 2xl:w-[600px]  md:w-1/3  flex-shrink-0 p-4 pr-[17px] lg:pr-[33px] xl:pr-[55px] 2xl:pr-[38px] md:pb-[66px] 2xl:mt-[5px]">
+                        <div class="card text-center px-4 pt-5 pb-[12px]">
+                            <div>
+                                <div class="flex justify-center xl:pt-[33px] 2xl:pt-[70px]">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                </div>
+                                <div
+                                    class="text-center text-[#FFFFFF] poppins font-light text-xs pt-4 px-3 2xl:px-[51px] 2xl:leading-[35px] 2xl:text-[22px]">
+                                    "I used to feel completely lost about NSFAS until I joined this community. The
+                                    support,
+                                    advice, and kindness I found here changed everything for me."
+                                </div>
+
+                                <div class="text-center  2xl:text-[22px] text-[#FFFFFF] poppins text-xs pt-4">
+                                    — Lerato N., Law Student
+                                    11111
+
+
+                                </div>
+                                <div class="flex justify-end translate-y-[24px]  px-[25px] 2xl:translate-y-[50px]">
+                                    <img class="w-[44px] xl:w-[70px] 2xl:w-[155px]"
+                                        src="/build/assests/img/Vector-coma.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div
+                        class="slide w-full 2xl:w-[600px]  md:w-1/3 xl:h-[400px] flex-shrink-0 p-4 pr-[17px] lg:pr-[33px] xl:pr-[55px] 2xl:pr-[68px] md:pb-[66px] 2xl:mt-[5px] 2xl:pl-[42px]">
+                        <div class="card text-center px-4 pt-5">
+                            <div>
+                                <div class="flex justify-center xl:pt-[33px] 2xl:pt-[70px]">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/blue-star.png" alt="">
+                                </div>
+                                <div
+                                    class="text-center text-[#FFFFFF] poppins font-light text-xs pt-4 px-3 2xl:px-[51px] 2xl:leading-[35px] 2xl:text-[22px]">
+                                    "I used to feel completely lost about NSFAS until I joined this community. The
+                                    support,
+                                    advice, and kindness I found here changed everything for me."
+                                </div>
+
+                                <div class="text-center  2xl:text-[22px] text-[#FFFFFF] poppins text-xs pt-4">
+                                    — Lerato N., Law Student
+                                    222
+
+                                </div>
+                                <div class="flex justify-end translate-y-[13px] px-[25px] 2xl:translate-y-[50px]">
+                                    <img class="w-[44px] xl:w-[70px] 2xl:w-[155px]"
+                                        src="/build/assests/img/Vector-coma.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div
+                        class="slide w-full 2xl:w-[600px]  md:w-1/3  flex-shrink-0 p-4 pr-[17px] lg:pr-[33px] xl:pr-[55px] 2xl:pr-[77px] md:pb-[66px] 2xl:mt-[5px] ">
+                        <div class="card text-center px-4 pt-5">
+                            <div>
+                                <div class="flex justify-center xl:pt-[33px] 2xl:pt-[70px]">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/star-black.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                </div>
+                                <div
+                                    class="text-center text-[#FFFFFF] poppins font-light text-xs pt-4 px-3 2xl:px-[51px] 2xl:leading-[35px] 2xl:text-[22px]">
+                                    "I used to feel completely lost about NSFAS until I joined this community. The
+                                    support,
+                                    advice, and kindness I found here changed everything for me."
+                                </div>
+
+                                <div class="text-center  2xl:text-[22px] text-[#FFFFFF] poppins text-xs pt-4">
+                                    — Lerato N., Law Student
+                                    3333
+
+
+                                </div>
+                                <div class="flex justify-end translate-y-[13px] px-[25px] 2xl:translate-y-[50px]">
+                                    <img class="w-[44px] xl:w-[70px] 2xl:w-[155px]"
+                                        src="/build/assests/img/Vector-coma.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div
+                        class="slide w-full  md:w-1/3  flex-shrink-0 p-4 pr-[17px] lg:pr-[33px] xl:pr-[55px] 2xl:pr-[77px] md:pb-[66px] 2xl:mt-[5px]">
+                        <div class="card text-center px-4 pt-5">
+                            <div>
+                                <div class="flex justify-center xl:pt-[33px] 2xl:pt-[70px]">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                </div>
+                                <div
+                                    class="text-center text-[#FFFFFF] poppins font-light text-xs pt-4 px-3 2xl:px-[51px] 2xl:leading-[35px] 2xl:text-[22px]">
+                                    "I used to feel completely lost about NSFAS until I joined this community. The
+                                    support,
+                                    advice, and kindness I found here changed everything for me."
+                                </div>
+
+                                <div class="text-center  2xl:text-[22px] text-[#FFFFFF] poppins text-xs pt-4">
+                                    — Lerato N., Law Student
+                                    444
+
+
+                                </div>
+                                <div class="flex justify-end translate-y-[13px] px-[25px] 2xl:translate-y-[50px]">
+                                    <img class="w-[44px] xl:w-[70px] 2xl:w-[155px]"
+                                        src="/build/assests/img/Vector-coma.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div
+                        class="slide w-full  md:w-1/3  flex-shrink-0 p-4 pr-[17px] lg:pr-[33px] xl:pr-[55px] 2xl:pr-[77px] md:pb-[66px] 2xl:mt-[5px]">
+                        <div class="card text-center px-4 pt-5">
+                            <div>
+                                <div class="flex justify-center xl:pt-[33px] 2xl:pt-[70px]">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                </div>
+                                <div
+                                    class="text-center text-[#FFFFFF] poppins font-light text-xs pt-4 px-3 2xl:px-[51px] 2xl:leading-[35px] 2xl:text-[22px]">
+                                    "I used to feel completely lost about NSFAS until I joined this community. The
+                                    support,
+                                    advice, and kindness I found here changed everything for me."
+                                </div>
+
+                                <div class="text-center  2xl:text-[22px] text-[#FFFFFF] poppins text-xs pt-4">
+                                    — Lerato N., Law Student
+                                    555
+
+
+                                </div>
+                                <div class="flex justify-end translate-y-[13px]  px-[25px] 2xl:translate-y-[50px]">
+                                    <img class="w-[44px] xl:w-[70px] 2xl:w-[155px]"
+                                        src="/build/assests/img/Vector-coma.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div
+                        class="slide w-full  md:w-1/3  flex-shrink-0 p-4 pr-[17px] lg:pr-[33px] xl:pr-[55px] 2xl:pr-[77px] md:pb-[66px] 2xl:mt-[5px]">
+                        <div class="card text-center px-4 pt-5">
+                            <div>
+                                <div class="flex justify-center xl:pt-[33px] 2xl:pt-[70px]">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                    <img class="w-[20px]  2xl:w-[36px]" src="/build/assests/img/Star 1.png" alt="">
+                                </div>
+                                <div
+                                    class="text-center text-[#FFFFFF] poppins font-light text-xs pt-4 px-3 2xl:px-[51px] 2xl:leading-[35px] 2xl:text-[22px]">
+                                    "I used to feel completely lost about NSFAS until I joined this community. The
+                                    support,
+                                    advice, and kindness I found here changed everything for me."
+                                </div>
+
+                                <div class="text-center  2xl:text-[22px] text-[#FFFFFF] poppins text-xs pt-4">
+                                    — Lerato N., Law Student
+                                    666
+
+
+                                </div>
+                                <div class="flex justify-end translate-y-[13px]  px-[25px] 2xl:translate-y-[50px]">
+                                    <img class="w-[44px] xl:w-[70px] 2xl:w-[155px]"
+                                        src="/build/assests/img/Vector-coma.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button onclick="prevSlide()"
+                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 flex justify-center items-center rounded-full 2xl:scale-150 2xl:text-[22px]">‹</button>
+                <button onclick="nextSlide()"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full 2xl:scale-150 2xl:text-[22px]">›</button>
+            </div>
+        </div>
+    </section>
+
+
+  
+
+    <footer>
+        <div
+            class="bg-[#0F2C6D] py-7 md:py-[55px] mt-[40px] lg:flex justify-around xl:justify-between xl:px-[55px] 2xl:px-0 2xl:mt-[170px] 2xl:pr-[100px]">
+            <!-- left  -->
+            <div class="text-center lg:text-start px-1 2xl:pt-[71px] 2xl:pl-[117px] 2xl:w-[50%]">
+                <div class="poppins text-white md:text-lg xl:text-xl 2xl:text-[44px]">
+                    NSFAS Community
+                </div>
+                <div
+                    class="poppins text-white pt-3 text-xs font-light md:px-[140px] lg:px-0 lg:w-[440px] 2xl:w-[69%] 2xl:leading-10 2xl:text-[22px] 2xl:pt-[40px]">
+                    Join a growing community of students helping each other understand and navigate NSFAS with
+                    confidence.
+                </div>
+                <div class="flex justify-center lg:justify-start pt-3">
+                    <img class="2xl:w-[267px]" src="/build/assests/img/footer-logo.png" alt="">
+                </div>
+                <div class="poppins text-white pt-3 text-xs font-light 2xl:text-[22px] 2xl:pt-[33px]">
+                    Copyright © Enterpret Inc. 2024 All Rights Reserved
+                </div>
+            </div>
+
+            <!-- right  -->
+            <div class="pt-10 pl-4 grid grid-cols-2 md:grid-cols-3  2xl:px-[33px] lg:w-[50%]  2xl:pt-[71px]">
+                <ul class="text-white poppins text-xs 2xl:text-[18px] font-light leading-7 ">
+                    <li class="font-bold leading-7 text-sm 2xl:text-[24px]">Company</li>
+                    <li class="2xl:pt-[50px]"><a href="">Home</a></li>
+                    <li class="2xl:pt-[30px]"><a href="">About us</a></li>
+                    <li class="2xl:pt-[30px]"><a href="">Careers</a></li>
+                </ul>
+
+                <ul class="text-white poppins text-xs 2xl:text-[18px] font-light leading-7">
+                    <li class="font-bold leading-7 text-sm 2xl:text-[24px]">Privacy Policy</li>
+                    <li class=" 2xl:pt-[50px]"><a href="">Cookies Policy</a></li>
+                    <li class=" 2xl:pt-[30px]"><a href="">Policy Updates</a></li>
+                    <li class=" 2xl:pt-[30px]"><a href="">Integrations</a></li>
+                    <li class=" 2xl:pt-[30px]"><a href="">Popia Compliant</a></li>
+                </ul>
+
+                <ul class="text-white poppins text-xs 2xl:text-[18px] font-light leading-7">
+                    <li class="font-bold leading-7 text-sm 2xl:text-[24px]">Terms & Conditions</li>
+                    <li class="2xl:pt-[30px]"><a href="">Account Registration</a></li>
+                    <li class="2xl:pt-[30px]"><a href="">User Conduct</a></li>
+                    <li class="2xl:pt-[30px]"><a href="">Content Guidelines</a></li>
+                    <li class="2xl:pt-[30px]"><a href="">Contact Us</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="text-center 2xl:text-[20px] text-xs poppins py-3">
+            Copyright © 2025 | NSFAS Student Support Group
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        AOS.init();
+    </script>
+    <!-- slider  -->
+    <script>
+        let current = 0;
+        const slider = document.getElementById('slider');
+        const slides = document.querySelectorAll('.slide');
+        const total = slides.length;
+
+        function getSlidesPerView() {
+            return window.innerWidth >= 768 ? 3 : 1;
+        }
+
+        function updateSlider() {
+            const slidesPerView = getSlidesPerView();
+            const offset = (100 / slidesPerView) * current;
+            slider.style.transform = `translateX(-${offset}%)`;
+
+            slides.forEach((slide, idx) => {
+                const card = slide.querySelector('.card');
+                card.classList.remove('scale-125', 'z-10');
+                card.classList.remove('bg-gradient-to-r', 'from-[#1A143A]', 'to-[#2B8CFF]');
+                card.classList.add('bg-gray-400', 'text-[text-[#858587]]');
+            });
+
+            // Center index for current view
+            let centerIdx = (current + Math.floor(slidesPerView / 2)) % total;
+            const centerCard = slides[centerIdx].querySelector('.card');
+            centerCard.classList.add('scale-125', 'z-10', 'text-white');
+            centerCard.classList.remove('bg-gray-400');
+            centerCard.classList.add('bg-gradient-to-r', 'from-[#1A143A]', 'to-[#2B8CFF]');
+        }
+
+        function nextSlide() {
+            current = (current + 1) % total;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            current = (current - 1 + total) % total;
+            updateSlider();
+        }
+
+        window.addEventListener('resize', updateSlider);
+
+        updateSlider();
+    </script>
+
+
+
+
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.getElementById('menu').classList.toggle('active');
+
+            // Toggle hamburger animation
+            const spans = this.querySelectorAll('.hamburger span');
+            if (this.classList.contains('active')) {
+                spans[0].style.transform = 'translateY(8px) rotate(45deg)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+    </script>
+
+    <style>
+        /* Additional custom styles that can't be done with Tailwind */
+        .active {
+            transform: scaleX(1) !important;
+        }
+
+        .active .menu-content {
+            opacity: 1 !important;
+        }
+
+        .active li {
+            transform: translateX(0) !important;
+            opacity: 1 !important;
+        }
+    </style>
+
+</body>
+
+</html>
